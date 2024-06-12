@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: url('https://source.unsplash.com/featured/?shooting-stars') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a202c;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    text-align: center;
+}
+
+.blur-background {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.solid-background {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 300px;
+    border-radius: 10px;
+}
+
+.about-background {
+    padding: 100px;
+    border-radius: 10px;
+    padding-bottom: 190px; 
+}
+
+.shooting-star {
+    position: absolute;
+    width: 75px;
+    height: 3px;
+    background: linear-gradient(white, transparent);
+    animation: shooting 2s infinite;
+}
+
+@keyframes shooting {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-1000px) translateY(1000px);
+        opacity: 0;
+    }
+}
+
+footer {
+    background-color: #1a202c; /* Tailwind's gray-800 */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    position: bottom;
+    z-index: 1;
+}
